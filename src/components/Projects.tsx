@@ -245,15 +245,6 @@ export default function Projects() {
           </div>
         )}
       </AnimatePresence>
-      <style jsx>{`
-        @keyframes custom-marquee {
-          0% { transform: translateX(0%); }
-          100% { transform: translateX(-33.333333%); }
-        }
-        .animate-custom-marquee {
-          animation: custom-marquee 80s linear infinite;
-        }
-      `}</style>
     </section>
   );
 }

@@ -58,11 +58,11 @@ export default function GlobalNav() {
             className="lg:hidden text-white z-50 p-2 relative"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
-            <div className="w-8 flex flex-col gap-2 relative z-50">
+            <span className="w-8 flex flex-col gap-2 relative z-50">
               <span className={clsx("w-full h-0.5 bg-white transition-all", mobileMenuOpen ? "rotate-45 translate-y-2.5" : "")} />
               <span className={clsx("w-full h-0.5 bg-white transition-all", mobileMenuOpen ? "opacity-0" : "")} />
               <span className={clsx("w-full h-0.5 bg-white transition-all", mobileMenuOpen ? "-rotate-45 -translate-y-2.5" : "")} />
-            </div>
+            </span>
           </button>
         </div>
       </header>
