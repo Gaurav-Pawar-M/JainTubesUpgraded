@@ -65,7 +65,7 @@ export default function About() {
           {/* Left Column: Heading & Content */}
           <div className="flex flex-col gap-8 xl:pr-8">
             <h2 className="font-heading text-4xl md:text-5xl lg:text-7xl font-bold leading-tight">
-              About Jain Tubes
+              About Us
             </h2>
             <div className="flex flex-col gap-6">
               <p className="font-sans text-lg md:text-xl text-white/80 leading-relaxed">
