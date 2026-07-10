@@ -110,30 +110,6 @@ export default function About() {
           </div>
         </motion.div>
 
-        {/* Our Commitment */}
-        <motion.div 
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 1.6, delay: 0.2, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
-          className="mt-24 md:mt-32 pt-16 border-t border-white/20"
-        >
-          <h3 className="font-heading text-2xl md:text-3xl font-bold mb-12 uppercase tracking-wider text-white">Our Commitment</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-12 gap-y-8">
-            {[
-              "Premium quality products from trusted manufacturers",
-              "Authorized distributor of Jindal Pipe",
-              "Reliable supply chain and on-time delivery",
-              "Competitive pricing with technical support",
-              "Trusted partner for government and private infrastructure projects"
-            ].map((item, idx) => (
-              <div key={idx} className="flex items-start gap-6 group cursor-default">
-                <div className="w-2 h-2 rounded-full bg-white/40 mt-2.5 flex-shrink-0 group-hover:bg-white transition-colors duration-500" />
-                <p className="font-sans text-lg text-white/80 leading-relaxed group-hover:text-white transition-colors duration-500">{item}</p>
-              </div>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
   );
