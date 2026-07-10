@@ -120,7 +120,7 @@ function Scene() {
       {/* Background Pipes Image to be rippled */}
       {/* eslint-disable-next-line jsx-a11y/alt-text */}
       <Image 
-        url="/assets/generated/interlocking_pipes.png" 
+        url="/assets/complete-water-solution.jpeg" 
         position={[0, 0, -3]} 
         scale={[viewport.width * 1.2, viewport.width * 1.2]} 
         transparent
