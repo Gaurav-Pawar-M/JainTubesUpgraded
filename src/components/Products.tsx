@@ -14,74 +14,203 @@ const products = [
   {
     id: "di-pipes",
     name: "Ductile Iron (DI) Pipes",
-    specs: "IS:8329, DN80–DN1200, K7/K9 wall-thickness classes, min. 420 MPa tensile strength, flexible push-on/restrained joints, standard lengths 5.5m/6m, cement-mortar or epoxy lining.",
-    use: "For water mains, sewage, industrial fluid transport.",
     tags: ["DI", "Water Mains", "High Tensile"],
     image: "/assets/products/di_pipe.jpg",
-  },
-  {
-    id: "ci-pipes",
-    name: "Cast (Spun) Iron Pipes",
-    specs: "IS:1536, Classes LA/A/B, 80mm–300mm.",
-    use: "For underground drainage, water supply, fire protection.",
-    tags: ["CI", "Drainage", "Fire Protection"],
-    image: "/assets/products/ci_pipe.jpg",
+    description: "Ductile Iron (DI) Pipes are among the most reliable and durable piping solutions for modern water infrastructure. Engineered with exceptional strength, flexibility, and corrosion resistance, they are widely used for potable water supply, irrigation networks, wastewater systems, fire protection, and industrial pipeline applications.",
+    features: [
+      "High tensile strength and superior durability",
+      "Excellent resistance to corrosion and abrasion",
+      "Leak-proof push-on and restrained joint systems",
+      "Long service life with minimal maintenance",
+      "Suitable for high-pressure water transmission",
+      "High impact resistance and flexibility",
+      "Safe for drinking water distribution",
+      "Environmentally friendly and fully recyclable"
+    ],
+    applications: [
+      "Drinking water supply projects",
+      "Urban and rural water distribution networks",
+      "Irrigation and agricultural pipelines",
+      "Sewage and wastewater systems",
+      "Industrial water supply",
+      "Firefighting pipeline networks",
+      "Smart city and municipal infrastructure projects",
+      "Government projects, including the Jal Jeevan Mission"
+    ],
+    whyChoose: "With over 40 years of industry experience, Jain Tubes is a trusted supplier of premium Ductile Iron Pipes to government departments, contractors, infrastructure developers, and industries across India. We combine genuine products, competitive pricing, technical expertise, and a strong distribution network to ensure every project receives the right piping solution, delivered on time."
   },
   {
     id: "hdpe",
     name: "HDPE Pipes",
-    specs: "IS:4984/IS:14333, PE63/PE80/PE100 grades, PN6–PN16, typical range 20mm–630mm, coil or straight lengths.",
-    use: "For potable water, irrigation, gas distribution.",
     tags: ["HDPE", "Irrigation", "Potable Water"],
     image: "/assets/products/hdpe.jpg",
+    description: "High-Density Polyethylene (HDPE) Pipes are advanced piping solutions known for their exceptional durability, flexibility, and corrosion resistance. Manufactured from high-quality polyethylene, HDPE pipes are designed to withstand harsh environmental conditions, making them an ideal choice for water supply, irrigation, sewerage, industrial, and infrastructure projects.",
+    features: [
+      "High strength with excellent flexibility",
+      "Corrosion, rust, and chemical resistant",
+      "Leak-proof butt fusion and electrofusion joints",
+      "Lightweight for easy handling and installation",
+      "UV-resistant and weatherproof",
+      "Smooth inner surface for superior flow efficiency",
+      "Low maintenance and long service life (up to 50 years or more)",
+      "Environmentally friendly and fully recyclable"
+    ],
+    applications: [
+      "Drinking water distribution systems",
+      "Agricultural irrigation and sprinkler systems",
+      "Underground water pipelines",
+      "Sewerage and drainage networks",
+      "Industrial fluid transportation",
+      "Mining and slurry pipelines",
+      "Cable ducting and telecom infrastructure",
+      "Gas distribution networks (using approved HDPE gas pipes)",
+      "Municipal and smart city infrastructure projects"
+    ],
+    whyChoose: "With over 40 years of industry experience, Jain Tubes has built a reputation for supplying reliable piping solutions for government departments, contractors, industries, and infrastructure developers across India. We offer high-quality HDPE pipes, competitive pricing, technical guidance, and timely delivery to ensure the success of every project."
   },
   {
-    id: "drainage",
-    name: "Drainage Pipes & Fittings",
-    specs: "CI, PVC, HDPE; bends, junctions, traps.",
-    use: "For stormwater, sanitary, industrial drainage.",
-    tags: ["Fittings", "Stormwater"],
+    id: "dwc-pipes",
+    name: "Double Wall Corrugated (DWC) Pipes",
+    tags: ["DWC", "Drainage", "Underground"],
     image: "/assets/products/drainage.jpg",
+    description: "Double Wall Corrugated (DWC) Pipes are high-performance piping solutions specifically designed for underground drainage, sewerage, stormwater management, cable ducting, and infrastructure projects. Manufactured from premium High-Density Polyethylene (HDPE), DWC pipes feature a unique dual-wall construction with a corrugated outer wall for exceptional strength and a smooth inner wall for efficient flow.",
+    features: [
+      "Double-wall construction for maximum strength and durability",
+      "High ring stiffness for heavy underground loads",
+      "Smooth inner surface for superior flow efficiency",
+      "Corrosion, chemical, and abrasion resistant",
+      "Lightweight and easy to transport and install",
+      "Leak-proof joints for reliable performance",
+      "Long service life with minimal maintenance",
+      "UV-resistant and environmentally friendly",
+      "Suitable for both gravity and non-pressure applications"
+    ],
+    applications: [
+      "Underground sewerage systems",
+      "Stormwater drainage networks",
+      "Highway and railway drainage",
+      "Cable ducting for electrical and telecom networks",
+      "Industrial drainage systems",
+      "Rainwater harvesting projects",
+      "Municipal infrastructure projects",
+      "Smart city developments",
+      "Residential and commercial drainage systems"
+    ],
+    whyChoose: "Whether you're developing a drainage network, cable ducting system, or large-scale infrastructure project, Jain Tubes offers dependable DWC piping solutions built for long-lasting performance."
   },
   {
-    id: "fittings",
-    name: "DI, CI & GI Fittings",
-    specs: "Flanged bends, tees, reducers, sockets, collars; sized to match parent pipe range.",
-    use: "For joining and directing pipelines.",
-    tags: ["Fittings", "Flanged"],
-    image: "/assets/products/fitting.jpg",
-  },
-  {
-    id: "valves",
-    name: "Valves",
-    specs: "Gate, sluice, butterfly, NRV, air valves; CI/DI body; IS:780/IS:13095; PN6/PN10/PN16; typical DN50–DN600.",
-    use: "For flow control and regulation.",
-    tags: ["Valves", "Flow Control"],
-    image: "/assets/products/valve.jpg",
+    id: "gi-pipes",
+    name: "Galvanized Iron (GI) Pipes",
+    tags: ["GI", "Plumbing", "Structural"],
+    image: "/assets/products/ci_pipe.jpg",
+    description: "Galvanized Iron (GI) Pipes are trusted for their strength, durability, and excellent corrosion resistance, making them an ideal choice for water supply, plumbing, industrial applications, fire protection systems, and structural projects. Coated with a protective layer of zinc, GI pipes offer enhanced resistance to rust and environmental wear, ensuring reliable performance and a long service life.",
+    features: [
+      "High strength and long-lasting durability",
+      "Zinc-coated for superior corrosion and rust resistance",
+      "Suitable for indoor and outdoor applications",
+      "Smooth internal surface for efficient water flow",
+      "High pressure and temperature resistance",
+      "Easy to install, maintain, and replace",
+      "Available in multiple sizes and thicknesses",
+      "Manufactured in accordance with IS standards"
+    ],
+    applications: [
+      "Domestic and commercial water supply systems",
+      "Plumbing and sanitation projects",
+      "Firefighting and sprinkler systems",
+      "Industrial piping and process plants",
+      "Agricultural irrigation systems",
+      "Borewell and pump installations",
+      "Structural and fabrication applications",
+      "HVAC and compressed air pipelines",
+      "Government and infrastructure projects"
+    ],
+    whyChoose: "Jain Tubes has earned the trust of contractors, industries, government departments, and infrastructure developers across India. We offer high-quality GI Pipes backed by expert technical guidance, competitive pricing, reliable stock availability, and prompt delivery."
   },
   {
     id: "meters",
     name: "Water Meters",
-    specs: "Multi-jet and single-jet, IS:779, DN15–DN150, flanged/threaded ends.",
-    use: "For volume measurement.",
     tags: ["Meters", "Measurement"],
     image: "/assets/products/meter.jpg",
+    description: "Water Meters are precision measuring devices designed to accurately monitor and record water consumption in residential, commercial, industrial, and municipal applications. They play a vital role in efficient water management, helping utilities, industries, and property owners optimize water usage, reduce wastage, and ensure accurate billing.",
+    features: [
+      "High accuracy for precise water measurement",
+      "Durable construction for long service life",
+      "Corrosion and wear-resistant materials",
+      "Low maintenance and reliable performance",
+      "Easy installation and operation",
+      "Suitable for domestic, commercial, industrial, and municipal applications",
+      "Tamper-resistant design for secure operation",
+      "Available in multiple sizes and flow capacities"
+    ],
+    applications: [
+      "Residential water supply systems",
+      "Commercial buildings and housing societies",
+      "Municipal water distribution networks",
+      "Industrial water management",
+      "Agricultural irrigation systems",
+      "Hotels, hospitals, schools, and institutions",
+      "Smart water management projects",
+      "Government water supply schemes, including the Jal Jeevan Mission"
+    ],
+    whyChoose: "Whether you require water meters for domestic installations or large-scale municipal projects, Jain Tubes offers dependable solutions that ensure accurate measurement, efficient water management, and long-lasting performance."
   },
   {
     id: "flange",
     name: "CI Double Flange Pipes",
-    specs: "IS:1538/BS:4504, 80mm–600mm.",
-    use: "For valve isolation, pump flanging.",
     tags: ["Flange", "Pump"],
     image: "/assets/products/flange_pipe.jpg",
+    description: "Cast Iron Double Flange (CI DF) Pipes are robust and durable piping solutions designed for above-ground and underground water transmission systems. Featuring flanges at both ends, these pipes provide strong, leak-proof, and secure bolted connections, making them ideal for installations that require easy assembly, maintenance, and disassembly.",
+    features: [
+      "High mechanical strength and durability",
+      "Double flange ends for secure and leak-proof bolted joints",
+      "Excellent corrosion and abrasion resistance",
+      "Suitable for high-pressure water transmission",
+      "Easy installation, maintenance, and replacement",
+      "Long service life with minimal maintenance",
+      "High dimensional accuracy and reliable performance",
+      "Available in various diameters and pressure classes"
+    ],
+    applications: [
+      "Water supply and distribution networks",
+      "Pumping stations",
+      "Water treatment and sewage treatment plants",
+      "Firefighting and hydrant systems",
+      "Industrial water pipelines",
+      "Municipal infrastructure projects",
+      "Irrigation and utility services",
+      "Government water supply schemes, including the Jal Jeevan Mission"
+    ],
+    whyChoose: "Jain Tubes is a trusted supplier of high-quality Cast Iron Double Flange Pipes for government departments, contractors, industries, and infrastructure developers across India. We ensure genuine products, competitive pricing, technical assistance, and prompt delivery to support projects of every scale."
   },
   {
-    id: "earthing",
-    name: "Earthing Pipes",
-    specs: "IS:3043, solid/perforated barrel.",
-    use: "For industrial plants, substations.",
-    tags: ["Earthing", "Industrial"],
-    image: "/assets/products/earthing.jpg",
+    id: "valves",
+    name: "CI & DI Sluice Valves",
+    tags: ["Valves", "Flow Control"],
+    image: "/assets/products/valve.jpg",
+    description: "Cast Iron (CI) and Ductile Iron (DI) Sluice Valves are essential flow-control devices used in water supply, irrigation, wastewater, and industrial pipeline systems. Designed to start or stop the flow of water efficiently, these valves provide reliable operation, tight shut-off performance, and long service life under demanding conditions.",
+    features: [
+      "Robust Cast Iron and Ductile Iron construction",
+      "Excellent corrosion and wear resistance",
+      "Tight sealing for leak-proof performance",
+      "Low operating torque for smooth operation",
+      "Suitable for underground and above-ground installations",
+      "Long service life with minimal maintenance",
+      "Available in non-rising stem and rising stem designs",
+      "Compatible with a wide range of pipeline systems"
+    ],
+    applications: [
+      "Water supply and distribution networks",
+      "Municipal and rural water projects",
+      "Irrigation systems",
+      "Pumping stations",
+      "Water and wastewater treatment plants",
+      "Industrial process pipelines",
+      "Fire protection systems",
+      "Infrastructure and utility projects",
+      "Government schemes, including the Jal Jeevan Mission"
+    ],
+    whyChoose: "Jain Tubes is a trusted supplier of high-performance valves and piping solutions. We offer genuine products from leading manufacturers, technical expertise, competitive pricing, and reliable delivery support for projects across India."
   }
 ];
 
@@ -236,10 +365,10 @@ export default function Products() {
             </div>
 
             {/* Detail Text Content */}
-            <div className="w-full lg:w-1/2 flex flex-col items-start fade-in-up">
+            <div className="w-full lg:w-1/2 flex flex-col items-start fade-in-up h-[70vh] overflow-y-auto pr-4 scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
               <button 
                 onClick={closeDetail}
-                className="mb-8 font-sans text-sm uppercase tracking-widest text-white/50 hover:text-white transition-colors flex items-center gap-2 group"
+                className="mb-8 font-sans text-sm uppercase tracking-widest text-white/50 hover:text-white transition-colors flex items-center gap-2 group sticky top-0 bg-[#001f65]/80 backdrop-blur-md py-4 z-20 w-full"
               >
                 <span className="transform transition-transform group-hover:-translate-x-1">←</span> Back to products
               </button>
@@ -256,15 +385,44 @@ export default function Products() {
                 ))}
               </div>
 
-              <div className="glass-card bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-xl relative overflow-hidden w-full">
-                <h4 className="font-sans text-sm text-white/50 uppercase tracking-widest mb-2">Specifications</h4>
-                <p className="font-sans text-lg text-white mb-6 leading-relaxed">
-                  {activeProduct.specs}
-                </p>
-                <h4 className="font-sans text-sm text-white/50 uppercase tracking-widest mb-2">Primary Use</h4>
-                <p className="font-sans text-white/90">
-                  {activeProduct.use}
-                </p>
+              <div className="glass-card bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-xl relative overflow-hidden w-full flex flex-col gap-8">
+                <div>
+                  <h4 className="font-sans text-sm text-white/50 uppercase tracking-widest mb-4">Overview</h4>
+                  <p className="font-sans text-lg text-white/90 leading-relaxed">
+                    {activeProduct.description}
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div>
+                    <h4 className="font-sans text-sm text-white/50 uppercase tracking-widest mb-4 border-b border-white/20 pb-2">Key Features</h4>
+                    <ul className="flex flex-col gap-3">
+                      {activeProduct.features.map((feature, idx) => (
+                        <li key={idx} className="font-sans text-sm text-white/80 flex items-start gap-2">
+                          <span className="text-white/40 mt-1">•</span> {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h4 className="font-sans text-sm text-white/50 uppercase tracking-widest mb-4 border-b border-white/20 pb-2">Applications</h4>
+                    <ul className="flex flex-col gap-3">
+                      {activeProduct.applications.map((app, idx) => (
+                        <li key={idx} className="font-sans text-sm text-white/80 flex items-start gap-2">
+                          <span className="text-white/40 mt-1">•</span> {app}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="bg-white/5 p-6 rounded-lg border border-white/10 mt-4">
+                  <h4 className="font-sans text-sm text-white/50 uppercase tracking-widest mb-3">Why Choose Jain Tubes?</h4>
+                  <p className="font-sans text-sm text-white/80 leading-relaxed">
+                    {activeProduct.whyChoose}
+                  </p>
+                </div>
               </div>
             </div>
 
