@@ -60,25 +60,35 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1.6, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center"
+          className="grid grid-cols-1 xl:grid-cols-2 gap-16 lg:gap-24"
         >
-          {/* Left Column: Heading & Highlight */}
-          <div className="flex flex-col gap-8">
-            <h3 className="font-heading text-4xl md:text-5xl lg:text-7xl font-bold leading-tight">
-              Pioneering India&apos;s Water Infrastructure Since 1970.
-            </h3>
+          {/* Left Column: Heading & Content */}
+          <div className="flex flex-col gap-8 xl:pr-8">
+            <h2 className="font-heading text-4xl md:text-5xl lg:text-7xl font-bold leading-tight">
+              About Jain Tubes
+            </h2>
+            <div className="flex flex-col gap-6">
+              <p className="font-sans text-lg md:text-xl text-white/80 leading-relaxed">
+                Jain Tubes has been a trusted name in India&apos;s piping industry, delivering high-quality piping solutions for infrastructure, industrial, agricultural, and water supply projects. Built on a foundation of quality, integrity, and customer satisfaction, we have earned the confidence of government departments, contractors, infrastructure developers, and businesses across the country.
+              </p>
+              <p className="font-sans text-lg md:text-xl text-white/80 leading-relaxed">
+                We specialize in the supply and distribution of a comprehensive range of piping products, including <strong className="text-white font-medium">Ductile Iron (DI) Pipes, Cast Iron Pipes, Galvanized Iron (GI) Pipes, HDPE Pipes, MS Pipes</strong>, fittings, valves, and allied pipeline accessories. As an <strong className="text-white font-medium">authorized distributor of Jindal Pipe</strong>, we proudly serve customers across <strong className="text-white font-medium">Madhya Pradesh, Chhattisgarh, Maharashtra, and Odisha</strong>, ensuring genuine products, competitive pricing, and dependable service.
+              </p>
+            </div>
           </div>
 
           {/* Right Column: Content & Stats */}
-          <div className="flex flex-col justify-center gap-8">
-            <p className="font-sans text-lg md:text-xl text-white/80 leading-relaxed">
-              JAIN Tubes is an ISO 9001:2000 certified manufacturer, trader, and distributor. For over five decades, we have engineered enduring flow systems—delivering Cast Iron, Ductile Iron, HDPE, and PVC pipes, valves, and fittings for national water infrastructure projects.
-            </p>
-            <p className="font-sans text-lg md:text-xl text-white/80 leading-relaxed">
-              Operating from Bhopal, our robust infrastructure and client-centric approach ensure every product meets the highest standards of reliability and strength.
-            </p>
+          <div className="flex flex-col justify-between gap-12">
+            <div className="flex flex-col gap-6">
+              <p className="font-sans text-lg md:text-xl text-white/80 leading-relaxed">
+                Jain Tubes has played an active role in major government and infrastructure projects, including the <strong className="text-white font-medium">Jal Jeevan Mission</strong>, supporting India&apos;s vision of providing safe and reliable drinking water to every household. Our extensive industry experience, strong supply network, and technical expertise enable us to deliver solutions that meet the highest standards of quality and performance.
+              </p>
+              <p className="font-sans text-lg md:text-xl text-white/80 leading-relaxed">
+                With our headquarters in <strong className="text-white font-medium">Bhopal</strong> and branch operations in <strong className="text-white font-medium">Nashik</strong> and <strong className="text-white font-medium">Chhattisgarh</strong>, we are committed to providing timely deliveries, expert guidance, and exceptional customer support. Whether it&apos;s a municipal water supply project, industrial application, irrigation system, or commercial development, Jain Tubes is your reliable partner for durable, efficient, and cost-effective piping solutions.
+              </p>
+            </div>
 
-            <div className="grid grid-cols-2 gap-8 mt-8">
+            <div className="grid grid-cols-2 gap-8 pt-8 border-t border-white/20">
               {stats.map((stat, i) => (
                 <div key={i} className="border-l-2 border-white/50 pl-4">
                   <div 
@@ -97,6 +107,31 @@ export default function About() {
                 </div>
               ))}
             </div>
+          </div>
+        </motion.div>
+
+        {/* Our Commitment */}
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 1.6, delay: 0.2, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
+          className="mt-24 md:mt-32 pt-16 border-t border-white/20"
+        >
+          <h3 className="font-heading text-2xl md:text-3xl font-bold mb-12 uppercase tracking-wider text-white">Our Commitment</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-12 gap-y-8">
+            {[
+              "Premium quality products from trusted manufacturers",
+              "Authorized distributor of Jindal Pipe",
+              "Reliable supply chain and on-time delivery",
+              "Competitive pricing with technical support",
+              "Trusted partner for government and private infrastructure projects"
+            ].map((item, idx) => (
+              <div key={idx} className="flex items-start gap-6 group cursor-default">
+                <div className="w-2 h-2 rounded-full bg-white/40 mt-2.5 flex-shrink-0 group-hover:bg-white transition-colors duration-500" />
+                <p className="font-sans text-lg text-white/80 leading-relaxed group-hover:text-white transition-colors duration-500">{item}</p>
+              </div>
+            ))}
           </div>
         </motion.div>
       </div>
