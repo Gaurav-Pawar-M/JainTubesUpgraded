@@ -27,10 +27,6 @@
   html,
   body {
     @apply bg-background text-ink antialiased overflow-x-hidden w-full m-0 p-0;
-    background-image: url('/assets/bg_texture_full_gradient.png');
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: repeat-y;
   }
 }
 
@@ -40,7 +36,7 @@
 }
 
 .glass-card {
-  @apply bg-ink/90 backdrop-blur-md border border-white/10 shadow-2xl;
+  @apply bg-white/10 backdrop-blur-md border border-white/20 shadow-2xl;
 }
 
 @keyframes custom-marquee {

@@ -385,7 +385,7 @@ export default function Products() {
                 ))}
               </div>
 
-              <div className="glass-card bg-ink/90 backdrop-blur-md border border-white/10 p-8 rounded-xl relative overflow-hidden w-full flex flex-col gap-8">
+              <div className="glass-card bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-xl relative overflow-hidden w-full flex flex-col gap-8">
                 <div>
                   <h4 className="font-sans text-sm text-white/50 uppercase tracking-widest mb-4">Overview</h4>
                   <p className="font-sans text-lg text-white/90 leading-relaxed">
