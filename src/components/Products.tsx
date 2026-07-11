@@ -365,10 +365,10 @@ export default function Products() {
             </div>
 
             {/* Detail Text Content */}
-            <div className="w-full lg:w-1/2 flex flex-col items-start fade-in-up h-[70vh] overflow-y-auto pr-4 scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+            <div className="w-full lg:w-1/2 flex flex-col items-start fade-in-up">
               <button 
                 onClick={closeDetail}
-                className="mb-8 font-sans text-sm uppercase tracking-widest text-white/50 hover:text-white transition-colors flex items-center gap-2 group sticky top-0 bg-[#001f65]/80 backdrop-blur-md py-4 z-20 w-full"
+                className="mb-8 font-sans text-sm uppercase tracking-widest text-white/50 hover:text-white transition-colors flex items-center gap-2 group"
               >
                 <span className="transform transition-transform group-hover:-translate-x-1">←</span> Back to products
               </button>
