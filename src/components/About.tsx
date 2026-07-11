@@ -50,9 +50,9 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-24 md:py-40 relative overflow-hidden text-white" ref={containerRef}>
+    <section id="about" className="py-24 md:py-40 relative overflow-hidden text-ink" ref={containerRef}>
       {/* Background aesthetic */}
-      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-white/5 rounded-full blur-[120px] pointer-events-none translate-x-1/3 -translate-y-1/3" />
+      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/10 rounded-full blur-[120px] pointer-events-none translate-x-1/3 -translate-y-1/3" />
       
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         <motion.div 
@@ -68,11 +68,11 @@ export default function About() {
               About Us
             </h2>
             <div className="flex flex-col gap-6">
-              <p className="font-sans text-lg md:text-xl text-white/80 leading-relaxed">
+              <p className="font-sans text-lg md:text-xl text-ink/80 leading-relaxed">
                 Jain Tubes has been a trusted name in India&apos;s piping industry, delivering high-quality piping solutions for infrastructure, industrial, agricultural, and water supply projects. Built on a foundation of quality, integrity, and customer satisfaction, we have earned the confidence of government departments, contractors, infrastructure developers, and businesses across the country.
               </p>
-              <p className="font-sans text-lg md:text-xl text-white/80 leading-relaxed">
-                We specialize in the supply and distribution of a comprehensive range of piping products, including <strong className="text-white font-medium">Ductile Iron (DI) Pipes, Cast Iron Pipes, Galvanized Iron (GI) Pipes, HDPE Pipes, MS Pipes</strong>, fittings, valves, and allied pipeline accessories. As an <strong className="text-white font-medium">authorized distributor of Jindal Pipe</strong>, we proudly serve customers across <strong className="text-white font-medium">Madhya Pradesh, Chhattisgarh, Maharashtra, and Odisha</strong>, ensuring genuine products, competitive pricing, and dependable service.
+              <p className="font-sans text-lg md:text-xl text-ink/80 leading-relaxed">
+                We specialize in the supply and distribution of a comprehensive range of piping products, including <strong className="text-primary font-bold">Ductile Iron (DI) Pipes, Cast Iron Pipes, Galvanized Iron (GI) Pipes, HDPE Pipes, MS Pipes</strong>, fittings, valves, and allied pipeline accessories. As an <strong className="text-primary font-bold">authorized distributor of Jindal Pipe</strong>, we proudly serve customers across <strong className="text-primary font-bold">Madhya Pradesh, Chhattisgarh, Maharashtra, and Odisha</strong>, ensuring genuine products, competitive pricing, and dependable service.
               </p>
             </div>
           </div>
@@ -80,19 +80,19 @@ export default function About() {
           {/* Right Column: Content & Stats */}
           <div className="flex flex-col justify-between gap-12">
             <div className="flex flex-col gap-6">
-              <p className="font-sans text-lg md:text-xl text-white/80 leading-relaxed">
-                Jain Tubes has played an active role in major government and infrastructure projects, including the <strong className="text-white font-medium">Jal Jeevan Mission</strong>, supporting India&apos;s vision of providing safe and reliable drinking water to every household. Our extensive industry experience, strong supply network, and technical expertise enable us to deliver solutions that meet the highest standards of quality and performance.
+              <p className="font-sans text-lg md:text-xl text-ink/80 leading-relaxed">
+                Jain Tubes has played an active role in major government and infrastructure projects, including the <strong className="text-primary font-bold">Jal Jeevan Mission</strong>, supporting India&apos;s vision of providing safe and reliable drinking water to every household. Our extensive industry experience, strong supply network, and technical expertise enable us to deliver solutions that meet the highest standards of quality and performance.
               </p>
-              <p className="font-sans text-lg md:text-xl text-white/80 leading-relaxed">
-                With our headquarters in <strong className="text-white font-medium">Bhopal</strong> and branch operations in <strong className="text-white font-medium">Nashik</strong> and <strong className="text-white font-medium">Chhattisgarh</strong>, we are committed to providing timely deliveries, expert guidance, and exceptional customer support. Whether it&apos;s a municipal water supply project, industrial application, irrigation system, or commercial development, Jain Tubes is your reliable partner for durable, efficient, and cost-effective piping solutions.
+              <p className="font-sans text-lg md:text-xl text-ink/80 leading-relaxed">
+                With our headquarters in <strong className="text-primary font-bold">Bhopal</strong> and branch operations in <strong className="text-primary font-bold">Nashik</strong> and <strong className="text-primary font-bold">Chhattisgarh</strong>, we are committed to providing timely deliveries, expert guidance, and exceptional customer support. Whether it&apos;s a municipal water supply project, industrial application, irrigation system, or commercial development, Jain Tubes is your reliable partner for durable, efficient, and cost-effective piping solutions.
               </p>
             </div>
 
-            <div className="grid grid-cols-2 gap-8 pt-8 border-t border-white/20">
+            <div className="grid grid-cols-2 gap-8 pt-8 border-t border-ink/10">
               {stats.map((stat, i) => (
-                <div key={i} className="border-l-2 border-white/50 pl-4">
+                <div key={i} className="border-l-2 border-primary/40 pl-4">
                   <div 
-                    className="font-heading text-4xl md:text-5xl font-bold text-white"
+                    className="font-heading text-4xl md:text-5xl font-bold text-primary"
                     ref={(el) => {
                       if (el) countersRef.current[i] = el;
                     }}
@@ -101,7 +101,7 @@ export default function About() {
                   >
                     0
                   </div>
-                  <div className="font-sans text-sm text-white/60 uppercase tracking-wide mt-2">
+                  <div className="font-sans text-sm text-ink/60 uppercase tracking-wide mt-2 font-semibold">
                     {stat.label}
                   </div>
                 </div>

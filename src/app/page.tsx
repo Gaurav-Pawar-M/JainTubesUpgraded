@@ -8,7 +8,7 @@ import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
-    <main className="relative bg-gradient-to-b from-[#0a388e] to-[#7fa1ff] w-full min-h-screen text-white">
+    <main className="relative w-full min-h-screen text-ink">
       <Hero />
       <About />
       <Projects />
