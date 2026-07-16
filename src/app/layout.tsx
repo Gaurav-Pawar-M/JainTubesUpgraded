@@ -31,14 +31,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${baloo.variable} ${poppins.variable} text-jt-ink bg-transparent`}>
+      <body className={`${baloo.variable} ${poppins.variable} text-white bg-transparent`}>
         <GlitchTransition />
         <GlobalNav />
         <FallingDroplet />
         <SmoothScrolling>
           {children}
         </SmoothScrolling>
-        <footer className="bg-transparent text-jt-ink/50 text-center py-6 font-sans text-sm border-t border-gray-200 relative z-50">
+        <footer className="bg-transparent text-white/50 text-center py-6 font-sans text-sm border-t border-gray-200 relative z-50">
           <p>&copy; {new Date().getFullYear()} JAIN Tubes. All rights reserved.</p>
         </footer>
         <Script src="/watercolor-bg.js" strategy="afterInteractive" />

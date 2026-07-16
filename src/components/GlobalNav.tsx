@@ -34,7 +34,7 @@ export default function GlobalNav() {
         )}
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3 text-jt-ink text-2xl md:text-3xl tracking-wide font-bold uppercase z-50 relative">
+          <Link href="/" className="flex items-center gap-3 text-white text-2xl md:text-3xl tracking-wide font-bold uppercase z-50 relative">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/assets/jain-logo1.png" alt="Jain Tubes" className="h-10 md:h-12 w-auto" />
             JAIN Tubes
@@ -46,7 +46,7 @@ export default function GlobalNav() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-base md:text-lg text-jt-ink/80 hover:text-jt-navy transition-colors "
+                className="text-base md:text-lg text-white/80 hover:text-white transition-colors "
               >
                 {item.name}
               </Link>
@@ -55,7 +55,7 @@ export default function GlobalNav() {
 
           {/* Mobile Toggle */}
           <button
-            className="lg:hidden text-jt-ink z-50 p-2 relative"
+            className="lg:hidden text-white z-50 p-2 relative"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             <span className="w-8 flex flex-col gap-2 relative z-50">
@@ -87,7 +87,7 @@ export default function GlobalNav() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 * i, duration: 0.5 }}
-                  className="text-4xl text-jt-ink hover:text-jt-navy transition-colors block"
+                  className="text-4xl text-white hover:text-white transition-colors block"
                 >
                   {item.name}
                 </motion.span>

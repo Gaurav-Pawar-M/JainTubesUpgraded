@@ -25,7 +25,8 @@
     }
     .jt-pill {
       display: inline-block;
-      background: #FBFBF9;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
       border-radius: 999px;
       padding: 0.5em 1.25em;
       position: relative;
@@ -39,12 +40,12 @@
       height: 100vh;
       pointer-events: none;
       z-index: -10;
-      background: #F6F6F3;
+      background: #030816;
       overflow: hidden;
     }
     #jt-watercolor-canvas .jt-blob {
       position: absolute;
-      filter: blur(34px);
+      filter: blur(44px);
       pointer-events: none;
     }
   `;
@@ -76,7 +77,7 @@
       d.style.top = (y - h1 / 2) + 'px';
       d.style.background = color;
       d.style.opacity = opacity;
-      d.style.mixBlendMode = 'multiply';
+      d.style.mixBlendMode = 'screen';
       d.style.borderRadius =
         rand(40, 60) + '% ' + rand(40, 60) + '% ' + rand(40, 60) + '% ' + rand(40, 60) + '% / ' +
         rand(40, 60) + '% ' + rand(40, 60) + '% ' + rand(40, 60) + '% ' + rand(40, 60) + '%';
