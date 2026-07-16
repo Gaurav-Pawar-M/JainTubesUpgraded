@@ -8,7 +8,7 @@ import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
-    <main className="relative bg-[#d9dcde] w-full min-h-screen text-ink">
+    <main className="relative jt-watercolor-bg w-full min-h-screen text-jt-ink">
       <Hero />
       <About />
       <Projects />

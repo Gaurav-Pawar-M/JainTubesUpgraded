@@ -89,13 +89,13 @@ export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<(Project & { cloneIndex: number }) | null>(null);
 
   return (
-    <section id="projects" className="relative py-32 overflow-hidden text-ink">
+    <section id="projects" className="relative py-32 overflow-hidden text-jt-ink">
       <div className="px-6 md:px-12 mb-16">
-        <h2 className="font-heading text-5xl md:text-7xl font-bold text-ink uppercase">
+        <h2 className="text-5xl md:text-7xl font-bold text-jt-ink uppercase">
           PROJECTS DELIVERED
         </h2>
         <div className="flex items-center gap-4 mt-4">
-          <p className="font-sans text-ink/60 uppercase tracking-widest text-sm">
+          <p className="text-jt-ink/60 uppercase tracking-widest text-sm">
             Auto scroll • Click to expand
           </p>
           <motion.div 
@@ -141,16 +141,16 @@ export default function Projects() {
                     </motion.div>
                     
                     <div className="absolute top-2 left-6 z-10">
-                      <span className="font-sans text-[10px] md:text-xs font-bold tracking-widest text-white uppercase">
+                      <span className="text-[10px] md:text-xs font-bold tracking-widest text-white uppercase">
                         Project 0{idx + 1}
                       </span>
                     </div>
 
                     <motion.div layoutId={`text-container-${uniqueId}`} className="absolute bottom-0 left-0 w-full p-8 md:p-12 flex flex-col justify-end z-10">
-                      <motion.h3 layoutId={`title-${uniqueId}`} className="font-heading text-3xl md:text-5xl font-bold text-white mb-4 leading-tight">
+                      <motion.h3 layoutId={`title-${uniqueId}`} className="text-3xl md:text-5xl font-bold text-white mb-4 leading-tight">
                         {project.title}
                       </motion.h3>
-                      <p className="font-sans text-ink/80 text-sm md:text-lg leading-relaxed">
+                      <p className="text-jt-ink/80 text-sm md:text-lg leading-relaxed">
                         {project.shortDesc}
                       </p>
                       
@@ -203,7 +203,7 @@ export default function Projects() {
 
               {/* Right: Elaborated Content */}
               <motion.div layoutId={`text-container-${selectedProject.id}-${selectedProject.cloneIndex}`} className="w-full lg:w-1/2 p-8 md:p-16 flex flex-col justify-center h-full overflow-y-auto bg-transparent">
-                <motion.h3 layoutId={`title-${selectedProject.id}-${selectedProject.cloneIndex}`} className="font-heading text-4xl md:text-6xl font-bold text-white mb-6">
+                <motion.h3 layoutId={`title-${selectedProject.id}-${selectedProject.cloneIndex}`} className="text-4xl md:text-6xl font-bold text-white mb-6">
                   {selectedProject.title}
                 </motion.h3>
 
@@ -211,7 +211,7 @@ export default function Projects() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 }}
-                  className="font-sans text-lg text-white/80 leading-relaxed mb-12"
+                  className="text-lg text-white/80 leading-relaxed mb-12"
                 >
                   {selectedProject.fullDesc}
                 </motion.p>
@@ -223,12 +223,12 @@ export default function Projects() {
                   className="grid grid-cols-2 gap-8"
                 >
                   <div className="border-l-2 border-white/50 pl-4">
-                    <div className="font-heading text-4xl md:text-5xl font-bold text-white">{selectedProject.metric1}</div>
-                    <div className="font-sans text-xs uppercase tracking-widest text-white/60 mt-1">{selectedProject.metric1Label}</div>
+                    <div className="text-4xl md:text-5xl font-bold text-white">{selectedProject.metric1}</div>
+                    <div className="text-xs uppercase tracking-widest text-white/60 mt-1">{selectedProject.metric1Label}</div>
                   </div>
                   <div className="border-l-2 border-white/50 pl-4">
-                    <div className="font-heading text-4xl md:text-5xl font-bold text-white">{selectedProject.metric2}</div>
-                    <div className="font-sans text-xs uppercase tracking-widest text-white/60 mt-1">{selectedProject.metric2Label}</div>
+                    <div className="text-4xl md:text-5xl font-bold text-white">{selectedProject.metric2}</div>
+                    <div className="text-xs uppercase tracking-widest text-white/60 mt-1">{selectedProject.metric2Label}</div>
                   </div>
                 </motion.div>
 

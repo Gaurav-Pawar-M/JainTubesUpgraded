@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 import gsap from "gsap";
 
 const testimonials = [
@@ -87,42 +88,43 @@ export default function Testimonials() {
         }}
       />
 
-      <div className="max-w-7xl mx-auto relative z-10">
-        <div className="flex flex-col items-center mb-16">
-          <span className="font-sans text-sm tracking-widest uppercase text-white/60 font-semibold mb-4">Client Feedback</span>
-          <h2 className="font-heading text-4xl md:text-6xl font-bold text-white text-center uppercase">
-            WORDS FROM OUR PARTNERS
+      <div className="max-w-7xl mx-auto relative z-10 flex flex-col items-center">
+        <div className="text-center mb-16 max-w-2xl">
+          <span className="text-sm tracking-widest uppercase text-jt-ink/60 font-semibold mb-4 jt-pill">Client Feedback</span>
+          <h2 className="text-4xl md:text-6xl font-bold text-jt-navy text-center uppercase">
+            Trusted by Leaders
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((test, i) => (
-            <div
+            <motion.div 
               key={i}
-              ref={(el) => { if (el) cardsRef.current[i] = el; }}
-              onMouseMove={(e) => handleMouseMove(e, i)}
-              onMouseLeave={() => handleMouseLeave(i)}
-              className="glass-card p-10 rounded-2xl flex flex-col justify-between h-full group border border-white/20 bg-white/10 backdrop-blur-md"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.8, delay: i * 0.2, ease: "easeOut" }}
+              className="bg-white border border-gray-200 shadow-sm p-8 md:p-12 flex flex-col justify-between group hover:-translate-y-2 transition-transform duration-500"
             >
-              <div className="mb-8">
-                <svg className="w-10 h-10 text-white/40 mb-6 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
+              <div>
+                <svg className="w-10 h-10 text-jt-ink/40 mb-6 group-hover:text-jt-navy transition-colors" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                 </svg>
-                <p className="font-sans text-lg md:text-xl text-white/80 leading-relaxed font-light">
+                <p className="text-lg md:text-xl text-jt-ink/80 leading-relaxed font-light">
                   &quot;{test.quote}&quot;
                 </p>
               </div>
-
-              <div className="flex items-center gap-4 border-t border-white/20 pt-6">
-                <div className="w-12 h-12 rounded-full bg-white/10 border border-white/30 flex items-center justify-center text-white font-heading font-bold text-lg">
+              
+              <div className="mt-12 flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-gray-100 border border-gray-300 flex items-center justify-center text-jt-navy font-bold text-lg">
                   {test.initials}
                 </div>
                 <div>
-                  <h4 className="font-heading text-xl font-bold text-white">{test.author}</h4>
-                  <p className="font-sans text-sm text-white/60">{test.company}</p>
+                  <h4 className="jt-heading text-xl font-bold text-jt-navy">{test.author}</h4>
+                  <p className="text-sm text-jt-ink/60">{test.company}</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

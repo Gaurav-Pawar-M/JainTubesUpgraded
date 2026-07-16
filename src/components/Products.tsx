@@ -416,7 +416,7 @@ export default function Products() {
     <section 
       id="products" 
       ref={containerRef}
-      className="relative w-full min-h-screen py-32 px-6 md:px-12 bg-transparent text-ink overflow-hidden"
+      className="relative w-full min-h-screen py-32 px-6 md:px-12 bg-transparent text-jt-ink overflow-hidden"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeaveList}
     >
@@ -445,18 +445,18 @@ export default function Products() {
             <div className="w-full lg:w-1/2 flex flex-col items-start fade-in-up">
               <button 
                 onClick={closeDetail}
-                className="mb-8 font-sans text-sm uppercase tracking-widest text-ink/50 hover:text-primary transition-colors flex items-center gap-2 group"
+                className="mb-8 text-sm uppercase tracking-widest text-jt-ink/50 hover:text-jt-navy transition-colors flex items-center gap-2 group"
               >
                 <span className="transform transition-transform group-hover:-translate-x-1">←</span> Back to products
               </button>
               
-              <h2 className="font-heading text-4xl md:text-6xl font-bold mb-6 tracking-tight uppercase leading-none">
+              <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight uppercase leading-none">
                 {activeProduct.name}
               </h2>
               
               <div className="flex flex-wrap gap-3 mb-8">
                 {activeProduct.tags.map((tag) => (
-                  <span key={tag} className="px-4 py-1 border border-ink/20 rounded-full text-xs uppercase tracking-wider text-ink">
+                  <span key={tag} className="px-4 py-1 border border-ink/20 rounded-full text-xs uppercase tracking-wider text-jt-ink">
                     {tag}
                   </span>
                 ))}
@@ -464,30 +464,30 @@ export default function Products() {
 
               <div className="glass-card p-8 rounded-xl relative overflow-hidden w-full flex flex-col gap-8">
                 <div>
-                  <h4 className="font-sans text-sm text-ink/50 uppercase tracking-widest mb-4">Overview</h4>
-                  <p className="font-sans text-lg text-ink/90 leading-relaxed">
+                  <h4 className="jt-heading text-sm text-jt-ink/50 uppercase tracking-widest mb-4">Overview</h4>
+                  <p className="text-lg text-jt-ink/90 leading-relaxed">
                     {activeProduct.description}
                   </p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
-                    <h4 className="font-sans text-sm text-ink/50 uppercase tracking-widest mb-4 border-b border-gray-200 pb-2">Key Features</h4>
+                    <h4 className="jt-heading text-sm text-jt-ink/50 uppercase tracking-widest mb-4 border-b border-gray-200 pb-2">Key Features</h4>
                     <ul className="flex flex-col gap-3">
                       {activeProduct.features.map((feature, idx) => (
-                        <li key={idx} className="font-sans text-sm text-ink/80 flex items-start gap-2">
-                          <span className="text-primary mt-1">•</span> {feature}
+                        <li key={idx} className="text-sm text-jt-ink/80 flex items-start gap-2">
+                          <span className="text-jt-navy mt-1">•</span> {feature}
                         </li>
                       ))}
                     </ul>
                   </div>
 
                   <div>
-                    <h4 className="font-sans text-sm text-ink/50 uppercase tracking-widest mb-4 border-b border-gray-200 pb-2">Applications</h4>
+                    <h4 className="jt-heading text-sm text-jt-ink/50 uppercase tracking-widest mb-4 border-b border-gray-200 pb-2">Applications</h4>
                     <ul className="flex flex-col gap-3">
                       {activeProduct.applications.map((app, idx) => (
-                        <li key={idx} className="font-sans text-sm text-ink/80 flex items-start gap-2">
-                          <span className="text-primary mt-1">•</span> {app}
+                        <li key={idx} className="text-sm text-jt-ink/80 flex items-start gap-2">
+                          <span className="text-jt-navy mt-1">•</span> {app}
                         </li>
                       ))}
                     </ul>
@@ -495,8 +495,8 @@ export default function Products() {
                 </div>
 
                 <div className="bg-gray-50 p-6 rounded-lg border border-gray-200 mt-4">
-                  <h4 className="font-sans text-sm text-ink/50 uppercase tracking-widest mb-3">Why Choose Jain Tubes?</h4>
-                  <p className="font-sans text-sm text-ink/80 leading-relaxed">
+                  <h4 className="jt-heading text-sm text-jt-ink/50 uppercase tracking-widest mb-3">Why Choose Jain Tubes?</h4>
+                  <p className="text-sm text-jt-ink/80 leading-relaxed">
                     {activeProduct.whyChoose}
                   </p>
                 </div>
@@ -509,7 +509,7 @@ export default function Products() {
         {/* List View */}
         {!isDetailView && (
           <div className="flex flex-col relative w-full pt-16">
-            <h2 className="font-heading text-5xl md:text-7xl font-bold text-ink uppercase mb-12 px-4 border-b border-gray-300 pb-8">Our Core Products</h2>
+            <h2 className="text-5xl md:text-7xl font-bold text-jt-ink uppercase mb-12 px-4 border-b border-gray-300 pb-8">Our Core Products</h2>
             
             {products.map((product, i) => (
               <div key={product.id} className="w-full">
@@ -519,11 +519,11 @@ export default function Products() {
                   onMouseEnter={() => handleMouseEnterRow(i)}
                   onClick={() => openDetail(i)}
                 >
-                  <div className="font-heading text-4xl lg:text-7xl font-bold uppercase tracking-tight transition-transform duration-300 group-hover:translate-x-6 flex items-center w-full">
-                    <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 mr-4 text-primary text-2xl lg:text-4xl w-8">→</span>
+                  <div className="text-4xl lg:text-7xl font-bold uppercase tracking-tight transition-transform duration-300 group-hover:translate-x-6 flex items-center w-full">
+                    <span className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 mr-4 text-jt-navy text-2xl lg:text-4xl w-8">→</span>
                     <span className="truncate pr-8">{product.name}</span>
                   </div>
-                  <span className="font-sans text-ink/30 text-xl tracking-widest shrink-0">
+                  <span className="text-jt-ink/30 text-xl tracking-widest shrink-0">
                     0{i + 1}
                   </span>
                 </div>
@@ -534,8 +534,8 @@ export default function Products() {
                     className="flex justify-between items-center cursor-pointer px-2"
                     onClick={() => setExpandedRow(expandedRow === i ? null : i)}
                   >
-                    <span className="font-heading text-3xl font-bold uppercase tracking-tight">{product.name}</span>
-                    <span className="text-ink/50 text-2xl">{expandedRow === i ? '−' : '+'}</span>
+                    <span className="text-3xl font-bold uppercase tracking-tight">{product.name}</span>
+                    <span className="text-jt-ink/50 text-2xl">{expandedRow === i ? '−' : '+'}</span>
                   </div>
                   
                   {expandedRow === i && (

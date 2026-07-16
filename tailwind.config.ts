@@ -14,6 +14,8 @@ const config: Config = {
         background: "#F2F0EB",
         white: "#ffffff",
         ink: "#1A1A1A",
+        "jt-navy": "#073A63",
+        "jt-ink": "#1A1A1A",
         steel: "#D9E4E8",
         paleCyan: "#E6EEF2",
       },

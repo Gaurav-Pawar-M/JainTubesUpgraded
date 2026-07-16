@@ -24,7 +24,7 @@ export default function Clients() {
   return (
     <section id="clients" className="py-24 bg-transparent overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 md:px-12 mb-12">
-        <h2 className="font-heading text-4xl md:text-5xl font-bold text-white text-center uppercase">
+        <h2 className="text-4xl md:text-5xl font-bold text-white text-center uppercase">
           TRUSTED BY INDUSTRY LEADERS
         </h2>
       </div>

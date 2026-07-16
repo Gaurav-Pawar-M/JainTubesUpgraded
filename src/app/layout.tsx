@@ -1,9 +1,23 @@
 import type { Metadata } from "next";
+import { Baloo_2, Poppins } from 'next/font/google';
+import Script from 'next/script';
 import "./globals.css";
 import SmoothScrolling from "@/components/SmoothScrolling";
 import GlobalNav from "@/components/GlobalNav";
 import FallingDroplet from "@/components/FallingDroplet";
 import GlitchTransition from "@/components/GlitchTransition";
+
+const baloo = Baloo_2({
+  subsets: ['latin'],
+  weight: ['600', '700', '800'],
+  variable: '--font-heading',
+});
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  variable: '--font-body',
+});
 
 export const metadata: Metadata = {
   title: "JAIN Tubes | Enduring Flow Since 1970",
@@ -17,16 +31,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-sans font-switzer bg-background text-ink" style={{'--font-heading': 'PP Neue Montreal', '--font-sans': 'Switzer'} as React.CSSProperties}>
+      <body className={`${baloo.variable} ${poppins.variable} bg-background text-jt-ink`}>
         <GlitchTransition />
         <GlobalNav />
         <FallingDroplet />
         <SmoothScrolling>
           {children}
         </SmoothScrolling>
-        <footer className="bg-transparent text-white/50 text-center py-6 font-sans text-sm border-t border-white/10 relative z-50">
+        <footer className="bg-transparent text-jt-ink/50 text-center py-6 font-sans text-sm border-t border-gray-200 relative z-50">
           <p>&copy; {new Date().getFullYear()} JAIN Tubes. All rights reserved.</p>
         </footer>
+        <Script src="/watercolor-bg.js" strategy="afterInteractive" />
       </body>
     </html>
   );
