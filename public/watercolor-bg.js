@@ -3,13 +3,7 @@
   style.textContent = `
     .jt-watercolor-bg {
       position: relative;
-      background: #F6F6F3;
-      overflow: hidden;
-    }
-    .jt-watercolor-bg .jt-blob {
-      position: absolute;
-      filter: blur(34px);
-      pointer-events: none;
+      background: transparent;
     }
     .jt-watercolor-bg h1,
     .jt-watercolor-bg h2,
@@ -37,15 +31,37 @@
       position: relative;
       z-index: 1;
     }
+    #jt-watercolor-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: -10;
+      background: #F6F6F3;
+      overflow: hidden;
+    }
+    #jt-watercolor-canvas .jt-blob {
+      position: absolute;
+      filter: blur(34px);
+      pointer-events: none;
+    }
   `;
   document.head.appendChild(style);
 
-  function jtPaintWatercolorBg(containerSelector) {
-    var host = document.querySelector(containerSelector);
-    if (!host) return;
+  function jtPaintWatercolorBg() {
+    var host = document.getElementById('jt-watercolor-canvas');
+    if (!host) {
+      host = document.createElement('div');
+      host.id = 'jt-watercolor-canvas';
+      document.body.insertBefore(host, document.body.firstChild);
+    } else {
+      host.innerHTML = '';
+    }
 
-    var w = host.clientWidth;
-    var h = host.clientHeight;
+    var w = window.innerWidth;
+    var h = window.innerHeight;
     var blues = ['#EAF7F9', '#D7F0F4', '#C0E7EE', '#A4DBE6', '#83CBDC', '#5FB9D2', '#3FA5C7'];
     var rand = function (a, b) { return a + Math.random() * (b - a); };
     var pick = function (arr, lo, hi) { return arr[Math.floor(rand(lo, hi))]; };
@@ -68,23 +84,26 @@
       host.appendChild(d);
     }
 
-    var cols = 6, rows = 4, cellW = w / cols, cellH = h / rows;
+    var cols = Math.max(3, Math.ceil(w / 300));
+    var rows = Math.max(3, Math.ceil(h / 300));
+    var cellW = w / cols, cellH = h / rows;
     for (var r = 0; r < rows; r++) {
       for (var c = 0; c < cols; c++) {
         if (rand(0, 1) < 0.72) {
           var cx = cellW * c + cellW * rand(0.15, 0.85);
           var cy = cellH * r + cellH * rand(0.15, 0.85);
-          shape(cx, cy, rand(180, 320), pick(blues, 0, 7), rand(0.18, 0.32));
+          shape(cx, cy, rand(200, 450), pick(blues, 0, 7), rand(0.15, 0.35));
         }
       }
     }
-
-    for (var i = 0; i < 6; i++) {
-      shape(rand(0, w), rand(0, h), rand(60, 120), pick(blues, 3, 7), rand(0.1, 0.2));
-    }
   }
 
-  document.addEventListener('DOMContentLoaded', function () {
-    jtPaintWatercolorBg('.jt-watercolor-bg');
+  // Run as soon as script executes
+  setTimeout(jtPaintWatercolorBg, 0);
+
+  window.jtPaintWatercolorBg = jtPaintWatercolorBg;
+  window.addEventListener('resize', function() {
+    clearTimeout(window.jtResizeTimeout);
+    window.jtResizeTimeout = setTimeout(jtPaintWatercolorBg, 250);
   });
 })();
