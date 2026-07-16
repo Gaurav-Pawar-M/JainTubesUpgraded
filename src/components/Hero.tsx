@@ -118,11 +118,10 @@ function Scene() {
       <Environment preset="city" />
       
       {/* Background Pipes Image to be rippled */}
-      {/* eslint-disable-next-line jsx-a11y/alt-text */}
       <Image 
-        url="/assets/complete-water-solution.jpeg" 
+        url="/assets/hero_banner.png" 
         position={[0, 0, -3]} 
-        scale={[viewport.width * 1.2, viewport.width * 1.2]} 
+        scale={[viewport.width * 1.2, viewport.width * 0.6]} 
         transparent
         opacity={1}
       />
