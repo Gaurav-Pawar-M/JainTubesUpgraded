@@ -104,7 +104,7 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.8, delay: i * 0.2, ease: "easeOut" }}
-              className="bg-white border border-gray-200 shadow-sm p-8 md:p-12 flex flex-col justify-between group hover:-translate-y-2 transition-transform duration-500"
+              className="bg-[#030816]/5 border border-gray-200 shadow-sm p-8 md:p-12 flex flex-col justify-between group hover:-translate-y-2 transition-transform duration-500"
             >
               <div>
                 <svg className="w-10 h-10 text-white/40 mb-6 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">

@@ -39,7 +39,7 @@ export default function FallingDroplet() {
   return (
     <div 
       ref={containerRef}
-      className="fixed right-4 md:right-12 top-0 bottom-0 w-[1px] bg-white/10 z-30 pointer-events-none hidden md:block"
+      className="fixed right-4 md:right-12 top-0 bottom-0 w-[1px] bg-[#030816]/10 z-30 pointer-events-none hidden md:block"
     >
       <div 
         ref={dropletRef}
@@ -50,7 +50,7 @@ export default function FallingDroplet() {
           clipPath: "ellipse(50% 50% at 50% 50%)",
         }}
       >
-        <div className="absolute inset-0 bg-white/30 rounded-full blur-[2px] translate-y-[-2px] scale-75" />
+        <div className="absolute inset-0 bg-[#030816]/30 rounded-full blur-[2px] translate-y-[-2px] scale-75" />
       </div>
     </div>
   );
