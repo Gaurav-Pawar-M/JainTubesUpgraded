@@ -211,9 +211,86 @@ const products = [
       "Government schemes, including the Jal Jeevan Mission"
     ],
     whyChoose: "Jain Tubes is a trusted supplier of high-performance valves and piping solutions. We offer genuine products from leading manufacturers, technical expertise, competitive pricing, and reliable delivery support for projects across India."
+  },
+  {
+    id: "opvc-pipes",
+    name: "OPVC Pipes",
+    tags: ["OPVC", "Water Supply", "High Strength"],
+    image: "/assets/products/hdpe.jpg",
+    description: "Oriented Polyvinyl Chloride (OPVC) pipes represent the latest advancement in PVC pipe technology. Through a unique molecular orientation process, OPVC pipes offer significantly enhanced mechanical properties, including higher impact strength, greater fatigue resistance, and increased hydraulic capacity compared to traditional PVC pipes.",
+    features: [
+      "Exceptional impact and fatigue resistance",
+      "Higher hydraulic capacity due to increased inner diameter",
+      "Lightweight for easy, cost-effective installation",
+      "Excellent resistance to water hammer and pressure surges",
+      "Complete resistance to corrosion and chemical attacks",
+      "Longer operational lifespan with minimal maintenance",
+      "Environmentally friendly with a lower carbon footprint",
+      "100% recyclable material"
+    ],
+    applications: [
+      "High-pressure water transmission and distribution",
+      "Irrigation and agricultural water networks",
+      "Industrial liquid transportation",
+      "Sewerage and wastewater pumping systems",
+      "Fire protection networks",
+      "Municipal drinking water projects"
+    ],
+    whyChoose: "Jain Tubes brings you state-of-the-art OPVC piping solutions that combine superior durability with cost efficiency. We provide expert guidance, reliable availability, and dedicated support for your most demanding water infrastructure projects."
+  },
+  {
+    id: "3989-pipes",
+    name: "IS 3989 CI Pipes",
+    tags: ["IS 3989", "Cast Iron", "Centrifugally Cast"],
+    image: "/assets/products/ci_pipe.jpg",
+    description: "IS 3989 Cast Iron Pipes are centrifugally cast (spun) iron pipes designed specifically for water, gas, and sewage applications. Manufactured to meet strict Indian Standards (IS 3989), these pipes deliver exceptional structural integrity, making them a preferred choice for robust underground installations and heavy-duty infrastructure projects.",
+    features: [
+      "Manufactured in strict compliance with IS 3989 standards",
+      "Centrifugally cast for uniform thickness and high density",
+      "Excellent resistance to soil and water corrosion",
+      "High load-bearing capacity for deep underground burial",
+      "Durable joints for leak-proof performance",
+      "Long service life spanning several decades",
+      "High safety factor for pressure fluctuations",
+      "Reliable performance in varying soil conditions"
+    ],
+    applications: [
+      "Municipal water supply and distribution networks",
+      "Sewerage and wastewater management systems",
+      "Industrial effluent disposal pipelines",
+      "Gas distribution networks",
+      "Underground drainage systems",
+      "Heavy-duty infrastructure projects"
+    ],
+    whyChoose: "When compliance and durability are non-negotiable, Jain Tubes delivers certified IS 3989 CI Pipes you can trust. Our established supply chain ensures timely delivery of authentic, standard-compliant products for critical public and private infrastructure."
+  },
+  {
+    id: "ci-pipes",
+    name: "Cast Iron (CI) Pipes",
+    tags: ["Cast Iron", "Drainage", "Durable"],
+    image: "/assets/products/ci_pipe.jpg",
+    description: "Cast Iron (CI) Pipes have been the traditional gold standard for drainage, sewerage, and water distribution systems. Known for their incredible longevity, superior sound-deadening properties, and inherent fire resistance, CI pipes remain highly relevant for commercial, residential, and industrial construction where lasting performance is required.",
+    features: [
+      "Unmatched durability with decades of proven service life",
+      "Excellent acoustic properties for quiet operation in buildings",
+      "Non-combustible and inherently fire resistant",
+      "High structural strength and crush resistance",
+      "Low thermal expansion compared to plastic alternatives",
+      "Resistant to typical household and industrial chemicals",
+      "Environmentally friendly (made from recycled scrap iron)",
+      "Robust joints capable of withstanding ground movement"
+    ],
+    applications: [
+      "Commercial and high-rise building drainage systems",
+      "Underground sewerage and wastewater lines",
+      "Industrial fluid and effluent transport",
+      "Stormwater drainage systems",
+      "Ventilation and soil pipes",
+      "Heritage and architectural restoration projects"
+    ],
+    whyChoose: "Jain Tubes offers premium Cast Iron pipes sourced from leading manufacturers. We provide comprehensive solutions for builders, plumbers, and contractors who demand the quietest, safest, and most durable piping materials available."
   }
 ];
-
 export default function Products() {
   const containerRef = useRef<HTMLDivElement>(null);
   const floatingContainerRef = useRef<HTMLDivElement>(null);
