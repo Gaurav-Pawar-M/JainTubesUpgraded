@@ -36,7 +36,7 @@ export default function GlobalNav() {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3 text-white font-heading text-2xl md:text-3xl tracking-wide font-bold uppercase z-50 relative">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/assets/jain-logo1.png" alt="Jain Tubes" className="h-10 md:h-12 w-auto" />
+            <img src="/assets/jain-logo1.png" alt="Jain Tubes" className="h-10 md:h-12 w-auto brightness-0 invert" />
             JAIN Tubes
           </Link>
           
