@@ -35,7 +35,7 @@ export default function Clients() {
 
         <Marquee speed={40} pauseOnHover gradient={false} className="py-4">
           {logos1.map((logo, i) => (
-            <div key={i} className="mx-8 md:mx-16 flex items-center justify-center w-48 h-28 group bg-white rounded-2xl shadow-xl p-4 border border-white/20">
+            <div key={i} className="mx-8 md:mx-16 flex items-center justify-center w-48 h-28 group bg-white rounded-2xl shadow-xl p-4 border border-gray-200">
               <img 
                 src={logo} 
                 alt="Client Logo" 
@@ -47,7 +47,7 @@ export default function Clients() {
 
         <Marquee speed={35} pauseOnHover gradient={false} direction="right" className="py-4">
           {logos2.map((logo, i) => (
-            <div key={i} className="mx-8 md:mx-16 flex items-center justify-center w-48 h-28 group bg-white rounded-2xl shadow-xl p-4 border border-white/20">
+            <div key={i} className="mx-8 md:mx-16 flex items-center justify-center w-48 h-28 group bg-white rounded-2xl shadow-xl p-4 border border-gray-200">
               <img 
                 src={logo} 
                 alt="Client Logo" 

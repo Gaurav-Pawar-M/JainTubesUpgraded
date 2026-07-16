@@ -89,13 +89,13 @@ export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<(Project & { cloneIndex: number }) | null>(null);
 
   return (
-    <section id="projects" className="relative py-32 overflow-hidden text-white">
+    <section id="projects" className="relative py-32 overflow-hidden text-ink">
       <div className="px-6 md:px-12 mb-16">
-        <h2 className="font-heading text-5xl md:text-7xl font-bold text-white uppercase">
+        <h2 className="font-heading text-5xl md:text-7xl font-bold text-ink uppercase">
           PROJECTS DELIVERED
         </h2>
         <div className="flex items-center gap-4 mt-4">
-          <p className="font-sans text-white/60 uppercase tracking-widest text-sm">
+          <p className="font-sans text-ink/60 uppercase tracking-widest text-sm">
             Auto scroll • Click to expand
           </p>
           <motion.div 
@@ -150,7 +150,7 @@ export default function Projects() {
                       <motion.h3 layoutId={`title-${uniqueId}`} className="font-heading text-3xl md:text-5xl font-bold text-white mb-4 leading-tight">
                         {project.title}
                       </motion.h3>
-                      <p className="font-sans text-white/80 text-sm md:text-lg leading-relaxed">
+                      <p className="font-sans text-ink/80 text-sm md:text-lg leading-relaxed">
                         {project.shortDesc}
                       </p>
                       

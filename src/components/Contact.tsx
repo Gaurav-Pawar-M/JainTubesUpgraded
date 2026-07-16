@@ -26,7 +26,7 @@ export default function Contact() {
 
         {/* Right: Contact Details */}
         <div className="w-full md:w-1/2 flex flex-col justify-center">
-          <p className="font-sans text-xl md:text-3xl font-light text-white/80 leading-relaxed mb-16 max-w-lg">
+          <p className="font-sans text-xl md:text-3xl font-light text-ink/80 leading-relaxed mb-16 max-w-lg">
             Whether you&apos;re laying a municipal trunk main or outfitting an industrial plant, we have the strength and scale to deliver.
           </p>
 
