@@ -137,7 +137,7 @@ export default function Hero() {
   return (
     <div className="w-full px-4 md:px-8 lg:px-12 pt-40 pb-12 flex flex-col gap-6">
       <div className="w-full flex justify-center items-center px-4">
-        <h1 className="text-sm md:text-base lg:text-lg tracking-[0.25em] md:tracking-[0.3em] text-white uppercase font-medium">
+        <h1 className="text-sm md:text-base lg:text-lg tracking-[0.25em] md:tracking-[0.3em] text-jt-navy uppercase font-medium">
           TRUSTED QUALITY • ENDURING FLOW • EST. 1970
         </h1>
       </div>

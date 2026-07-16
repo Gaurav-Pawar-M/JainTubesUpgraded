@@ -89,13 +89,13 @@ export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<(Project & { cloneIndex: number }) | null>(null);
 
   return (
-    <section id="projects" className="relative py-32 overflow-hidden text-white">
+    <section id="projects" className="relative py-32 overflow-hidden text-white/90">
       <div className="px-6 md:px-12 mb-16">
-        <h2 className="text-5xl md:text-7xl font-bold text-white uppercase">
+        <h2 className="text-5xl md:text-7xl font-bold text-white/90 uppercase">
           PROJECTS DELIVERED
         </h2>
         <div className="flex items-center gap-4 mt-4">
-          <p className="text-white/60 uppercase tracking-widest text-sm">
+          <p className="text-white/90/60 uppercase tracking-widest text-sm">
             Auto scroll • Click to expand
           </p>
           <motion.div 
@@ -122,7 +122,7 @@ export default function Projects() {
                     layoutId={`card-${uniqueId}`}
                     onClick={() => setSelectedProject({ ...project, cloneIndex })}
                     whileHover={{ y: -10, transition: { duration: 0.3 } }}
-                    className="relative w-[350px] h-[500px] md:w-[500px] md:h-[700px] flex-shrink-0 cursor-pointer shadow-2xl bg-[#030816]/5 overflow-hidden"
+                    className="relative w-[350px] h-[500px] md:w-[500px] md:h-[700px] flex-shrink-0 cursor-pointer shadow-2xl bg-white overflow-hidden"
                     style={{
                       clipPath: "polygon(0 0, 30% 0, 35% 6%, 100% 6%, 100% 100%, 0 100%)",
                       borderRadius: "16px"
@@ -150,7 +150,7 @@ export default function Projects() {
                       <motion.h3 layoutId={`title-${uniqueId}`} className="text-3xl md:text-5xl font-bold text-white mb-4 leading-tight">
                         {project.title}
                       </motion.h3>
-                      <p className="text-white/80 text-sm md:text-lg leading-relaxed">
+                      <p className="text-white/90/80 text-sm md:text-lg leading-relaxed">
                         {project.shortDesc}
                       </p>
                       
@@ -183,7 +183,7 @@ export default function Projects() {
 
             <motion.div 
               layoutId={`card-${selectedProject.id}-${selectedProject.cloneIndex}`}
-              className="relative w-full max-w-7xl h-[85vh] bg-[#030816]/10 backdrop-blur-2xl overflow-hidden shadow-2xl flex flex-col lg:flex-row z-10 pointer-events-auto border border-white/20"
+              className="relative w-full max-w-7xl h-[85vh] bg-white/10 backdrop-blur-2xl overflow-hidden shadow-2xl flex flex-col lg:flex-row z-10 pointer-events-auto border border-white/20"
               // Remove the folder clip path when expanded to show a full modal
               style={{
                 clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
@@ -234,7 +234,7 @@ export default function Projects() {
 
                 <button 
                   onClick={() => setSelectedProject(null)}
-                  className="absolute top-6 right-6 w-12 h-12 bg-[#030816]/10 hover:bg-[#030816]/20 rounded-full flex items-center justify-center transition-colors"
+                  className="absolute top-6 right-6 w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors"
                 >
                   <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 13L13 1M1 1L13 13" stroke="white" strokeWidth="2" strokeLinecap="round"/>
