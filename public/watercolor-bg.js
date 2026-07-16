@@ -62,7 +62,7 @@
 
     var w = window.innerWidth;
     var h = window.innerHeight;
-    var blues = ['#EAF7F9', '#D7F0F4', '#C0E7EE', '#A4DBE6', '#83CBDC', '#5FB9D2', '#3FA5C7'];
+    var blues = ['#38BDF8', '#0EA5E9', '#0284C7', '#0369A1', '#075985', '#082F49', '#1E3A8A'];
     var rand = function (a, b) { return a + Math.random() * (b - a); };
     var pick = function (arr, lo, hi) { return arr[Math.floor(rand(lo, hi))]; };
 
@@ -84,17 +84,23 @@
       host.appendChild(d);
     }
 
-    var cols = Math.max(3, Math.ceil(w / 300));
-    var rows = Math.max(3, Math.ceil(h / 300));
+    var cols = Math.max(3, Math.ceil(w / 350));
+    var rows = Math.max(3, Math.ceil(h / 350));
     var cellW = w / cols, cellH = h / rows;
     for (var r = 0; r < rows; r++) {
       for (var c = 0; c < cols; c++) {
-        if (rand(0, 1) < 0.72) {
-          var cx = cellW * c + cellW * rand(0.15, 0.85);
-          var cy = cellH * r + cellH * rand(0.15, 0.85);
-          shape(cx, cy, rand(200, 450), pick(blues, 0, 7), rand(0.15, 0.35));
+        if (rand(0, 1) < 0.85) {
+          var cx = cellW * c + cellW * rand(0.1, 0.9);
+          var cy = cellH * r + cellH * rand(0.1, 0.9);
+          // High opacity and larger sizes for clear smudges
+          shape(cx, cy, rand(300, 600), pick(blues, 0, 7), rand(0.3, 0.6));
         }
       }
+    }
+    
+    // Add some massive dark background washes
+    for(var i=0; i<4; i++) {
+        shape(rand(0, w), rand(0, h), rand(800, 1200), pick(blues, 4, 7), rand(0.1, 0.2));
     }
   }
 

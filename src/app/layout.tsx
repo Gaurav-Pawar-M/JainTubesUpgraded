@@ -31,7 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${baloo.variable} ${poppins.variable} bg-background text-jt-ink`}>
+      <body className={`${baloo.variable} ${poppins.variable} text-jt-ink bg-transparent`}>
         <GlitchTransition />
         <GlobalNav />
         <FallingDroplet />
